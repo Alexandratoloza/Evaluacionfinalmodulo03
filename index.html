@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion final Modulo 3</title>
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main class="container">
+        <h1>Busca Tu ==> 
+            <img src="./assets/img/sh2.jpg" alt="imagen-uno" width="400px">
+        </h1>
+        <h2>¡Ingresa un Número!</h2>
+        <form id="HeroeForm" class="mb-5">
+            <input  id="HeroeNumber" type="number" class="form-control mb-2" placeholder="Ingrese número del Super Heroe">
+            <div class="valid-feedback mb-2"> 
+                SuperHeroe Encontrado
+            </div>
+            <div class="invalid-feedback mb-2"> 
+                Ingrese un Número menor o igual a 731
+            </div>
+            <button class="btn btn-primary" type="submit"> Buscar</button>
+
+        </form>
+
+        
+
+        <section class="row">
+            <article class="col-12 col-md-6" id="heroResult">
+                <!---->
+                <div class="card">
+                    <img src="https://www.superherodb.com/pictures2/portraits/10/100/1155.jpg" alt="" class="card-img-top">
+                <div class=" card-body">
+                    <h6>Name:</h6>
+                </div>   
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">height:</li>
+                        <li class="list-group-item">weigth:</li>
+                        <li class="list-group-item">connections:</li>
+                        <li class="list-group-item">powerstats:</li>
+                        <li class="list-group-item">first_appearance: </li>
+                        <li class="list-group-item">occupation:</li>
+                        <li class="list-group-item">aliases:</li>
+                      </ul>
+
+                </div>
+
+
+                <!---->
+
+            </article>
+        </section>
+
+        <article class="col-12 col-md-6">
+
+            <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+
+        </article>
+
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.canvasjs.com/jquery.canvasjs.min.js"></script>
+    
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
