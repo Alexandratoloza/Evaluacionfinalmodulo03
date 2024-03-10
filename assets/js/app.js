@@ -46,6 +46,15 @@ HeroeForm.on("submit", function (event){
                
                success(Heroe) {
                     console.log(Heroe)
+                    console.log("imagen:", Heroe.image.url)
+                    console.log("name:", Heroe.name)
+                    console.log ("height:", Heroe.appearance.height)
+                    console.log ("weigth:", Heroe.appearance.weigth)
+                    console.log ("connections:", Heroe.connections)
+                    console.log ("powerstats:", Heroe.powerstats)
+                    console.log ("appearance:", Heroe.appearance)
+                    console.log ("occupation:", Heroe.work.occupation)
+                    console.log ("aliases:", Heroe.biography.aliases)
                },
                error (e){
                 console.log (e)
