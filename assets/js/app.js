@@ -6,6 +6,8 @@ const HeroeForm = $("#HeroeForm")
 const HeroeNumber = $("#HeroeNumber")
 const heroResult = $("heroResult")
 
+
+
 //formulario
 
 HeroeForm.on("submit", function (event){
@@ -19,10 +21,11 @@ HeroeForm.on("submit", function (event){
     HeroeNumber.removeClass('is-valid is-invalid') // para remover las clases
         //console.log(typeof (HeroeNumberUser))
 
-//validar q sea numero/mayor a 0 / espacios
+    //validar q sea numero/mayor a 0 / espacios
     if(HeroeNumberUser <= 731 ){
        // console.log("es correcta")
         HeroeNumber.addClass('is-valid')
+        getHeroe(HeroeNumberUser)
 
     } else{
         //console.log("no es correcta")
@@ -33,6 +36,28 @@ HeroeForm.on("submit", function (event){
 
 })
 
+        // consumir la API de los Super Herores con ajax
+        //https://www.superheroapi.com/api.php/4905856019427443/100
+
+        const getHeroe = (HeroeNumberfn) => {
+            $.ajax({
+               url: "https://www.superheroapi.com/api.php/4905856019427443/" +  HeroeNumberfn, //o la interpolacion
+               method: "GET",
+               
+               success(Heroe) {
+                    console.log(Heroe)
+               },
+               error (e){
+                console.log (e)
+
+               }
+
+
+            })
+
+
+
+        }
 
 
 })
