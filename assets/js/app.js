@@ -44,17 +44,46 @@ HeroeForm.on("submit", function (event){
                url: "https://www.superheroapi.com/api.php/4905856019427443/" +  HeroeNumberfn, //o la interpolacion
                method: "GET",
                
-               success(Heroe) {
-                    console.log(Heroe)
-                    console.log("imagen:", Heroe.image.url)
-                    console.log("name:", Heroe.name)
-                    console.log ("height:", Heroe.appearance.height)
-                    console.log ("weigth:", Heroe.appearance.weigth)
-                    console.log ("connections:", Heroe.connections)
-                    console.log ("powerstats:", Heroe.powerstats)
-                    console.log ("appearance:", Heroe.appearance)
-                    console.log ("occupation:", Heroe.work.occupation)
-                    console.log ("aliases:", Heroe.biography.aliases)
+               success(Heroe) { 
+                    //console.log(Heroe)
+                    
+                    // construir el objeto 
+                    const  mysuperHeroe = {
+                        image:  Heroe.image.url,
+                        name: Heroe.name,
+                        height: Heroe.appearance.height,
+                        weight: Heroe.appearance.weight,
+                        connections: Heroe.connections,
+                        powerstats: Heroe.powerstats,
+                        appearance: Heroe.appearance,
+                        occupation: Heroe.work.occupation,
+                        aliases: Heroe.biography.aliases
+
+                    }
+
+                    // console.log(mysuperHeroe)
+                    heroResult.html(` 
+                    <div class="card">
+                    <img src="${mysuperHeroe.image}"
+                    alt="" class="card-img-top">
+                <div class=" card-body">
+                    <h6>Name ${mysuperHeroe.name}:</h6>
+                </div>   
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">height: ${mysuperHeroe.height}</li>
+                        <li class="list-group-item">weight: ${mysuperHeroe.weight}</li>
+                        <li class="list-group-item">connections: ${mysuperHeroe.connections} </li>
+                        <li class="list-group-item">powerstats: ${mysuperHeroe.powerstats} </li>
+                        <li class="list-group-item">first_appearance: ${mysuperHeroe.appearance} </li>
+                        <li class="list-group-item">occupation: ${mysuperHeroe.occupation} </li>
+                        <li class="list-group-item">aliases: ${mysuperHeroe.aliases} </li>
+                      </ul>
+
+                </div>
+                    
+                    `)
+
+
                },
                error (e){
                 console.log (e)
