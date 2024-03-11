@@ -100,13 +100,11 @@ $(document).ready(function () {
 
                 //pintar el Grafico
 
-                const dataPoints = mysuperHeroe.powerstats.map((powerstats) => {
+                const dataPoints = Object.entries(mysuperHeroe.powerstats).map(([label, y]) => {
                     return ({
-                        label: Heroe.powerstats,
-                        y: Heroe.powerstat
-
+                        label: label,
+                        y: y
                     })
-
                 })
 
                 //  console.log("dataPoints", dataPoints)
@@ -121,27 +119,21 @@ $(document).ready(function () {
                     data: [
                         {
                             type: "pie",
+                            showlnLengend: "true",
+                            legenText: "{label}",
+                            indexLabel: "{label} ({y})",
+                            yValueFormatString: "#,##0.#" % "",
                             dataPoints: dataPoints
-                        }
-                    ]
+                        }]
                 };
                 $("#chartContainer").CanvasJSChart(GraficoSH);
 
 
+                {
 
+                    error(e) 
+                        console.log(e)
+                    }
+                }  
 
-            },
-            error(e) {
-                console.log(e)
-
-            }
-
-
-        })
-
-
-
-    }
-
-
-})
+            })}})
