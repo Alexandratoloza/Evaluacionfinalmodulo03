@@ -23,6 +23,15 @@ $(document).ready(function () {
         //console.log(typeof (HeroeNumberUser))
 
         //validar q sea numero/mayor a 0 / espacios
+        function validarNumeroNegativo(HeroeNumberUser) {
+            // Comprueba si el número es menor que cero
+            if (HeroeNumberUser< 0) {
+                HeroeNumber.addClass('is-valid')
+              return true; // Es un número negativo
+            } else {
+              return false; // No es un número negativo
+            }
+          }
         if (HeroeNumberUser <= 731) {
             // console.log("es correcta")
             HeroeNumber.addClass('is-valid')
