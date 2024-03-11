@@ -32,7 +32,7 @@ $(document).ready(function () {
             //console.log("no es correcta")
             HeroeNumber.addClass('is-invalid')
         }
-      
+
 
 
     })
@@ -129,15 +129,15 @@ $(document).ready(function () {
                 $("#chartContainer").CanvasJSChart(GraficoSH);
 
 
-              
+
                 {
 
 
-                    error(e) 
-                        console.log(e)
-                    }
-                }  
+                    error(e)
+                    console.log(e)
+                }
+            }
 
-            })
-        }
-    })
+        })
+    }
+})
