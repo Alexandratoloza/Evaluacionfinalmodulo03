@@ -23,16 +23,7 @@ $(document).ready(function () {
         //console.log(typeof (HeroeNumberUser))
 
         //validar q sea numero/mayor a 0 / espacios
-        function validarNumeroNegativo(HeroeNumberUser) {
-            // Comprueba si el número es menor que cero
-            if (HeroeNumberUser< 0) {
-                HeroeNumber.addClass('is-valid')
-              return true; // Es un número negativo
-            } else {
-              return false; // No es un número negativo
-            }
-          }
-        if (HeroeNumberUser <= 731) {
+        if (HeroeNumberUser > 0 ) {
             // console.log("es correcta")
             HeroeNumber.addClass('is-valid')
             getHeroe(HeroeNumberUser)
@@ -56,15 +47,15 @@ $(document).ready(function () {
 
             success(Heroe) {
                 // console.log(Heroe)
-                console.log("imagen:", Heroe.image.url)
-                console.log("name:", Heroe.name)
-                console.log("height:", Heroe.appearance.height)
-                console.log("weight:", Heroe.appearance.weight)
-                console.log("connections:", Heroe.connections)
-                console.log("powerstats:", Heroe.powerstats)
-                console.log("appearance:", Heroe.appearance)
-                console.log("occupation:", Heroe.work.occupation)
-                console.log("aliases:", Heroe.biography.aliases)
+               // console.log("imagen:", Heroe.image.url)
+                //console.log("name:", Heroe.name)
+                //console.log("height:", Heroe.appearance.height)
+                //console.log("weight:", Heroe.appearance.weight)
+                //console.log("connections:", Heroe.connections)
+                //console.log("powerstats:", Heroe.powerstats)
+                //console.log("appearance:", Heroe.appearance)
+                //console.log("occupation:", Heroe.work.occupation)
+                //console.log("aliases:", Heroe.biography.aliases)
 
 
 
